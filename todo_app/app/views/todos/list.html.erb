@@ -1,0 +1,37 @@
+<h1>To-Do lists</h1>
+
+<div class="row">
+<div class="col-md-6">
+<table class="table table-well">
+  <thead>
+    <tr>
+      <th>TO-DOs No Completed :(</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todo_no_completed.each do |todo| %>
+      <tr>
+        <td><%= todo.description %></td>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<div class="col-md-6">
+<table class="table table-well">
+  <thead>
+    <tr>
+      <th>TO-DOs Completed :)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todo_completed.each do |todo| %>
+      <tr>
+        <td><%= todo.description %></td>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
