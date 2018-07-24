@@ -8,7 +8,19 @@
 </div>
 
 <div class="field">
+	<%= label :completed, "Completed", value: true %>
+	<%= form.radio_button :completed, true, :value => true  %>
+</div>
+
+<div class="field">
+	<%= label :completed, "No Completed", value: false %>
+	<%= form.radio_button :completed, false, :checked => true, :value => false  %>
+</div>
+
+<div class="field">
 	<%= form.submit "Save To-do", :class => 'btn btn-primary' %>
 </div>
 
 <% end %>
+
+
