@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-	
+
 
 	def index
 		@todos = Todo.all
@@ -26,6 +26,15 @@ class TodosController < ApplicationController
 
 	def edit
 		@todo = Todo.find(params[:id])
+		
+		if @todo.completed
+			@valueT = true
+			@valueF = false
+		else
+			@valueT = false
+			@valueF = true
+		end
+		
 	end
 
 	def update
