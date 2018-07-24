@@ -1,11 +1,13 @@
 <h1>TO-DO LIST</h1>
 
+<%= link_to 'New To-do', todos_new_path , :class => 'btn btn-primary' %>
+
 <table class="table table-well">
   <thead>
     <tr>
       <th>Description</th>
       <th>completed</th>
-      <!-- <th colspan="3"></th>-->
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -14,7 +16,7 @@
       <tr>
         <td><%= todo.description %></td>
         <td><%= todo.completed %></td>
-               
+        <td><%= link_to 'Show To-do', todo, :class => 'btn btn-primary' %></td>      
       </tr>
     <% end %>
   </tbody>

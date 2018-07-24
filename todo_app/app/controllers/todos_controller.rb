@@ -14,6 +14,15 @@ class TodosController < ApplicationController
 		redirect_to todos_path
 	end
 
+	def show
+		@todo = Todo.find(params[:id])
+		if @todo.completed
+			@completed = 'Yes'
+		else
+			@completed = 'No'
+		end
+	end
+
 	private
 		def post_params
 			params.require(:todo).permit(:description, :completed)
