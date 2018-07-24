@@ -1,4 +1,4 @@
-<h1>NEW TO-DO</h1>
+<h1>Edit TO-DO <%=@todo.id%></h1>
 
 <%= form_with model: @todo, local: true do |form| %>
 
@@ -26,4 +26,3 @@
 <div >
 	<%= link_to 'Back', todos_path, :class => 'btn btn-primary' %></td>  
 </div>
-

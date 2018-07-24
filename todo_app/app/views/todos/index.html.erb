@@ -7,7 +7,7 @@
     <tr>
       <th>Description</th>
       <th>completed</th>
-      <th colspan="1"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -16,7 +16,8 @@
       <tr>
         <td><%= todo.description %></td>
         <td><%= todo.completed %></td>
-        <td><%= link_to 'Show To-do', todo, :class => 'btn btn-primary' %></td>      
+        <td><%= link_to 'Show To-do', todo, :class => 'btn btn-primary' %></td> 
+        <td><%= link_to 'Edit To-do', edit_path(todo), :class => 'btn btn-warning' %></td>     
       </tr>
     <% end %>
   </tbody>
