@@ -7,7 +7,7 @@
     <tr>
       <th>Description</th>
       <th>completed</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -16,6 +16,7 @@
       <tr>
         <td><%= todo.description %></td>
         <td><%= todo.completed %></td>
+        <td><%= link_to 'Completed To-do', completed_path(todo), :class => 'btn btn-primary' %></td>
         <td><%= link_to 'Show To-do', todo, :class => 'btn btn-primary' %></td> 
         <td><%= link_to 'Edit To-do', edit_path(todo), :class => 'btn btn-warning' %></td>     
         <td><%= link_to 'Delete To-do', todo, method: :delete,data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
