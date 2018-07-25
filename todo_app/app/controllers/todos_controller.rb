@@ -7,6 +7,8 @@ class TodosController < ApplicationController
 
 	def new
 		@todo =Todo.new
+		@valueT = false
+		@valueF = true
 	end
 
 	def create
@@ -17,11 +19,8 @@ class TodosController < ApplicationController
 
 	def show
 		@todo = Todo.find(params[:id])
-		if @todo.completed
-			@completed = 'Yes'
-		else
-			@completed = 'No'
-		end
+		@completed = @todo.completed ? 'Yes' : 'No' 
+			
 	end
 
 	def edit
