@@ -1,27 +1,6 @@
 <h1>NEW TO-DO</h1>
 
-<%= form_with model: @todo, local: true do |form| %>
-
-<div class="field">
-	<%= form.label :description, "Description" %>
-	<%= form.text_field :description %>
-</div>
-
-<div class="field">
-	<%= label :completed, "Completed", value: true %>
-	<%= form.radio_button :completed, true, :value => true  %>
-</div>
-
-<div class="field">
-	<%= label :completed, "No Completed", value: false %>
-	<%= form.radio_button :completed, false, :checked => true, :value => false  %>
-</div>
-
-<div class="field">
-	<%= form.submit "Save", :class => 'btn btn-primary' %>
-</div>
-
-<% end %>
+<%= render 'todos/form' %>
 
 <div >
 	<%= link_to 'Back', todos_path, :class => 'btn btn-primary' %></td>  
