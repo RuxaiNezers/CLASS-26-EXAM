@@ -1,13 +1,16 @@
 <h1>TO-DO LIST</h1>
 
-<%= link_to 'New To-do', todos_new_path , :class => 'btn btn-default' %>
+<%= link_to ' New To-do', todos_new_path , :class => 'btn btn-info glyphicon glyphicon-plus-sign' %>
 
 <table class="table table-well">
   <thead>
     <tr>
       <th>Description</th>
-      <th>completed</th>
-      <th colspan="4"></th>
+      <th>Completed</th>
+      <th>Mark</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -16,10 +19,10 @@
       <tr>
         <td><%= todo.description %></td>
         <td><%= todo.completed %></td>
-        <td><%= link_to 'Completed To-do', completed_path(todo), :class => 'btn btn-info' %></td>
-        <td><%= link_to 'Show To-do', todo, :class => 'btn btn-primary' %></td> 
-        <td><%= link_to 'Edit To-do', edit_path(todo), :class => 'btn btn-warning' %></td>     
-        <td><%= link_to 'Delete To-do', todo, method: :delete,data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+        <td><%= link_to '', completed_path(todo), :class => 'btn btn-success glyphicon glyphicon-ok' %></td>
+        <td><%= link_to '', todo, :class => 'btn btn-primary glyphicon glyphicon-search' %></td> 
+        <td><%= link_to '', edit_path(todo), :class => 'btn btn-warning glyphicon glyphicon-edit' %></td>     
+        <td><%= link_to '', todo, method: :delete,data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger glyphicon glyphicon-remove' %></td>
       </tr>
     <% end %>
   </tbody>
